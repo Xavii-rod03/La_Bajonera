@@ -3,439 +3,504 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La Bajonera — Menú</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
+
+<title>La Bajonera | Menú Oficial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --rojo: #C0392B;
-    --rojo-oscuro: #922b21;
-    --naranja: #E67E22;
-    --crema: #FDF6EC;
-    --carbon: #1A1008;
-    --carbon2: #2C1A0E;
-    --dorado: #D4AC0D;
-    --gris: #7D6B5E;
-    --blanco: #FFFDF9;
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-  body {
-    background-color: var(--carbon);
-    color: var(--blanco);
-    font-family: 'Barlow', sans-serif;
-    min-height: 100vh;
-    background-image:
-      radial-gradient(ellipse at 20% 0%, rgba(192,57,43,0.18) 0%, transparent 55%),
-      radial-gradient(ellipse at 80% 100%, rgba(230,126,34,0.12) 0%, transparent 50%);
-  }
+:root{
+    --negro:#0E0E0E;
+    --gris:#181818;
+    --rojo:#E63946;
+    --naranja:#FF7A00;
+    --blanco:#F5F5F5;
+    --gris-texto:#BDBDBD;
+}
 
-  /* HERO */
-  .hero {
-    text-align: center;
-    padding: 3.5rem 1rem 2.5rem;
-    position: relative;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    pointer-events: none;
-  }
-  .flame-icon { font-size: 2.5rem; margin-bottom: .5rem; }
-  .hero h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(4rem, 12vw, 7rem);
-    letter-spacing: 4px;
-    line-height: 1;
-    color: var(--blanco);
-  }
-  .hero h1 span { color: var(--rojo); }
-  .hero .sub {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1rem;
-    letter-spacing: .3em;
-    color: var(--gris);
-    text-transform: uppercase;
-    margin-top: .4rem;
-  }
-  .horario-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    margin-top: 1.2rem;
-    background: rgba(192,57,43,0.2);
-    border: 1px solid rgba(192,57,43,0.5);
-    border-radius: 40px;
-    padding: 6px 20px;
-    font-size: .85rem;
-    color: #F1948A;
-    letter-spacing: .05em;
-  }
-  .dot { width: 7px; height: 7px; border-radius: 50%; background: #E74C3C; animation: pulse 1.4s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
+body{
+    background:var(--negro);
+    color:var(--blanco);
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
 
-  /* MAIN */
-  .container { max-width: 900px; margin: 0 auto; padding: 0 1rem 4rem; }
+/* HERO */
 
-  /* SECTION TITLE */
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    letter-spacing: 3px;
-    color: var(--rojo);
-    margin: 3rem 0 1.2rem;
-    display: flex; align-items: center; gap: 14px;
-  }
-  .section-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(to right, rgba(192,57,43,.5), transparent);
-  }
+.hero{
+    min-height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+}
 
-  /* CARDS GRID */
-  .grid { display: grid; gap: 14px; }
-  .grid-2 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
-  .grid-3 { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
-  .grid-4 { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.hero-content{
+    max-width:850px;
+}
 
-  .card {
-    background: var(--carbon2);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 16px;
-    overflow: hidden;
-    transition: transform .2s, border-color .2s;
-  }
-  .card:hover { transform: translateY(-4px); border-color: rgba(192,57,43,.5); }
+.hero h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(5rem,13vw,9rem);
+    letter-spacing:6px;
+}
 
-  .card-img {
-    width: 100%; height: 160px;
-    object-fit: cover;
-    display: block;
-    background: #2a1a10;
-  }
-  .card-img-sm { height: 130px; }
+.hero span{
+    color:var(--rojo);
+}
 
-  .card-body { padding: 14px 16px 16px; }
-  .card-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    letter-spacing: .04em;
-    color: var(--blanco);
-    margin-bottom: 4px;
-  }
-  .card-desc { font-size: .8rem; color: var(--gris); line-height: 1.5; margin-bottom: 10px; }
-  .card-footer { display: flex; align-items: center; justify-content: space-between; }
-  .price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--naranja); letter-spacing: 1px; }
-  .tag {
-    font-size: .7rem; font-weight: 600; letter-spacing: .06em;
-    padding: 3px 9px; border-radius: 20px;
-    text-transform: uppercase;
-  }
-  .tag-pop { background: rgba(212,172,13,.15); color: #F4D03F; border: 1px solid rgba(212,172,13,.3); }
-  .tag-hot { background: rgba(192,57,43,.15); color: #E74C3C; border: 1px solid rgba(192,57,43,.3); }
-  .tag-full { background: rgba(39,174,96,.12); color: #58D68D; border: 1px solid rgba(39,174,96,.25); }
+.hero p{
+    margin-top:15px;
+    font-size:1.2rem;
+    color:var(--gris-texto);
+    line-height:1.8;
+}
 
-  /* COMBOS */
-  .combo-card {
-    background: linear-gradient(135deg, #3B1A0A 0%, #2C1A0E 100%);
-    border: 1px solid rgba(192,57,43,.35);
-    border-radius: 16px;
-    overflow: hidden;
-    position: relative;
-    transition: transform .2s, border-color .2s;
-  }
-  .combo-card:hover { transform: translateY(-4px); border-color: var(--rojo); }
-  .combo-num {
-    position: absolute; top: 14px; left: 14px;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem; line-height: 1;
-    color: rgba(192,57,43,.25);
-    pointer-events: none;
-  }
-  .combo-img { width: 100%; height: 150px; object-fit: cover; opacity: .85; }
-  .combo-body { padding: 14px 16px 16px; }
-  .combo-name {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.2rem; font-weight: 700;
-    color: var(--blanco); margin-bottom: 4px;
-  }
-  .combo-desc { font-size: .8rem; color: var(--gris); line-height: 1.5; margin-bottom: 10px; }
-  .combo-footer { display: flex; align-items: center; justify-content: space-between; }
-  .ahorro {
-    font-size: .7rem; font-weight: 600; letter-spacing: .05em;
-    background: rgba(192,57,43,.2); color: #E74C3C;
-    border: 1px solid rgba(192,57,43,.4);
-    padding: 3px 9px; border-radius: 20px; text-transform: uppercase;
-  }
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 40px;
+    background:var(--rojo);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
 
-  /* BEBIDAS */
-  .bebidas-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: .5rem; }
-  .bebida-card {
-    background: var(--carbon2);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px;
-    overflow: hidden;
-    width: 160px;
-    transition: transform .2s, border-color .2s;
-  }
-  .bebida-card:hover { transform: translateY(-3px); border-color: rgba(52,152,219,.4); }
-  .bebida-img { width: 100%; height: 110px; object-fit: cover; }
-  .bebida-body { padding: 10px 12px 12px; }
-  .bebida-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: var(--blanco); }
-  .bebida-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: #5DADE2; margin-top: 4px; }
+.btn:hover{
+    background:var(--naranja);
+    transform:translateY(-5px);
+}
 
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 2.5rem 1rem;
-    border-top: 1px solid rgba(255,255,255,0.07);
-    margin-top: 2rem;
-  }
-  footer p { font-size: .85rem; color: var(--gris); line-height: 1.9; }
-  footer strong { color: var(--blanco); }
+/* GENERAL */
 
-  /* fallback img bg */
-  img { background: #2a1a10; }
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:90px 0;
+}
+
+.section-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:3.5rem;
+    letter-spacing:4px;
+    margin-bottom:40px;
+    color:var(--rojo);
+    text-align:center;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+/* CARDS */
+
+.card{
+    background:var(--gris);
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.05);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:var(--rojo);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card h3{
+    font-size:1.6rem;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:var(--gris-texto);
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.price{
+    color:var(--naranja);
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+/* COMBOS */
+
+.combo{
+    background:linear-gradient(135deg,#1B1B1B,#101010);
+    border:2px solid rgba(230,57,70,.3);
+}
+
+.combo:hover{
+    border-color:var(--rojo);
+}
+
+/* FOOTER */
+
+footer{
+    background:#080808;
+    padding:50px 20px;
+    text-align:center;
+}
+
+footer p{
+    color:var(--gris-texto);
+    line-height:2;
+}
+
+footer strong{
+    color:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:5rem;
+}
+
+.section-title{
+    font-size:2.5rem;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="flame-icon">🔥</div>
-  <h1>La <span>Bajonera</span></h1>
-  <p class="sub">Zona Rosa · CDMX · Comida nocturna</p>
-  <div class="horario-badge">
-    <span class="dot"></span>
-    Abierto 10:00 pm — 6:00 am
-  </div>
-</header>
 
-<div class="container">
+<section class="hero">
 
-  <!-- TACOS -->
-  <div class="section-title">🌮 Tacos</div>
-  <div class="grid grid-4">
-    <div class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80" alt="Tacos al pastor" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Al Pastor</div>
-        <div class="card-desc">Adobado y dorado al trompo, con piña y cilantro</div>
-        <div class="card-footer">
-          <span class="price">$20</span>
-          <span class="tag tag-pop">⭐ favorito</span>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&q=80" alt="Tacos de bistec" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Bistec</div>
-        <div class="card-desc">Res a la plancha con cebolla y cilantro fresco</div>
-        <div class="card-footer">
-          <span class="price">$22</span>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?w=400&q=80" alt="Tacos de suadero" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Suadero</div>
-        <div class="card-desc">Carne suave y jugosa, el rey de la madrugada</div>
-        <div class="card-footer">
-          <span class="price">$22</span>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400&q=80" alt="Tacos campechanos" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Campechano</div>
-        <div class="card-desc">Bistec + suadero juntos. Lo mejor de dos mundos</div>
-        <div class="card-footer">
-          <span class="price">$25</span>
-          <span class="tag tag-hot">🔥 especial</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="hero-content">
 
-  <!-- HOT DOGS -->
-  <div class="section-title">🌭 Hot Dogs</div>
-  <div class="grid grid-2">
-    <div class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1612392062631-94b650b8e6f2?w=500&q=80" alt="Hot dog clásico" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Hot Dog Clásico</div>
-        <div class="card-desc">Salchicha de res, mostaza, catsup y cebolla crujiente</div>
-        <div class="card-footer">
-          <span class="price">$45</span>
-          <span class="tag tag-pop">⭐ popular</span>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1558030137-a56c1b004fa3?w=500&q=80" alt="Hot dog especial" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Hot Dog Especial</div>
-        <div class="card-desc">Con tocino crujiente, queso derretido, jalapeño y aderezos</div>
-        <div class="card-footer">
-          <span class="price">$65</span>
-          <span class="tag tag-hot">🔥 gourmet</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<h1>La <span>Bajonera</span></h1>
 
-  <!-- HAMBURGUESAS -->
-  <div class="section-title">🍔 Hamburguesas</div>
-  <div class="grid grid-3">
-    <div class="card">
-      <img class="card-img card-img-sm" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80" alt="Hamburguesa sencilla" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Sencilla</div>
-        <div class="card-desc">Pan, carne, lechuga, jitomate y catsup</div>
-        <div class="card-footer"><span class="price">$70</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img card-img-sm" src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80" alt="Hamburguesa con queso" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Con Queso</div>
-        <div class="card-desc">Igual que la sencilla más queso americano fundido</div>
-        <div class="card-footer">
-          <span class="price">$80</span>
-          <span class="tag tag-pop">⭐ recomendada</span>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img card-img-sm" src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&q=80" alt="Hamburguesa doble" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Doble</div>
-        <div class="card-desc">Dos carnes, doble queso y todo el acompañamiento</div>
-        <div class="card-footer">
-          <span class="price">$100</span>
-          <span class="tag tag-full">💪 llenadora</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<p>
+🌙🔥 La parada oficial del hambre nocturna en Zona Rosa. <br>
+Tacos, hamburguesas, hot dogs y combos para sobrevivir la madrugada.
+</p>
 
-  <!-- PAPAS -->
-  <div class="section-title">🍟 Papas a la Francesa</div>
-  <div class="grid grid-2">
-    <div class="card">
-      <img class="card-img card-img-sm" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&q=80" alt="Papas chicas" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Chicas</div>
-        <div class="card-desc">Porción individual, perfectas para acompañar</div>
-        <div class="card-footer"><span class="price">$30</span></div>
-      </div>
-    </div>
-    <div class="card">
-      <img class="card-img card-img-sm" src="https://images.unsplash.com/photo-1576107232684-1279f390859f?w=400&q=80" alt="Papas grandes" loading="lazy">
-      <div class="card-body">
-        <div class="card-name">Grandes</div>
-        <div class="card-desc">Porción generosa, ideal para compartir entre dos</div>
-        <div class="card-footer">
-          <span class="price">$45</span>
-          <span class="tag tag-full">👥 para 2</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- COMBOS -->
-  <div class="section-title">🎯 Combos</div>
-  <div class="grid grid-2">
-    <div class="combo-card">
-      <span class="combo-num">1</span>
-      <img class="combo-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=80" alt="Combo taquero" loading="lazy">
-      <div class="combo-body">
-        <div class="combo-name">Combo Taquero</div>
-        <div class="combo-desc">3 tacos a elegir + refresco de tu preferencia</div>
-        <div class="combo-footer">
-          <span class="price">$85</span>
-          <span class="ahorro">Ahorras $15</span>
-        </div>
-      </div>
-    </div>
-    <div class="combo-card">
-      <span class="combo-num">2</span>
-      <img class="combo-img" src="https://images.unsplash.com/photo-1612392062631-94b650b8e6f2?w=500&q=80" alt="Combo jocho feliz" loading="lazy">
-      <div class="combo-body">
-        <div class="combo-name">Jocho Feliz</div>
-        <div class="combo-desc">Hot dog clásico + papas chicas + refresco</div>
-        <div class="combo-footer">
-          <span class="price">$100</span>
-          <span class="ahorro">Ahorras $20</span>
-        </div>
-      </div>
-    </div>
-    <div class="combo-card">
-      <span class="combo-num">3</span>
-      <img class="combo-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80" alt="Combo La Bajonera Total" loading="lazy">
-      <div class="combo-body">
-        <div class="combo-name">La Bajonera Total</div>
-        <div class="combo-desc">Hamburguesa con queso + papas grandes + refresco</div>
-        <div class="combo-footer">
-          <span class="price">$140</span>
-          <span class="ahorro">Ahorras $25</span>
-        </div>
-      </div>
-    </div>
-    <div class="combo-card">
-      <span class="combo-num">4</span>
-      <img class="combo-img" src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=500&q=80" alt="Combo mixto" loading="lazy">
-      <div class="combo-body">
-        <div class="combo-name">Mixto</div>
-        <div class="combo-desc">2 tacos a elegir + hot dog clásico + refresco</div>
-        <div class="combo-footer">
-          <span class="price">$110</span>
-          <span class="ahorro">Ahorras $15</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BEBIDAS -->
-  <div class="section-title">🥤 Bebidas</div>
-  <div class="bebidas-row">
-    <div class="bebida-card">
-      <img class="bebida-img" src="https://images.unsplash.com/photo-1554866585-cd94860890b7?w=300&q=80" alt="Coca-Cola" loading="lazy">
-      <div class="bebida-body">
-        <div class="bebida-name">Coca-Cola</div>
-        <div class="bebida-price">$25</div>
-      </div>
-    </div>
-    <div class="bebida-card">
-      <img class="bebida-img" src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=300&q=80" alt="Agua natural" loading="lazy">
-      <div class="bebida-body">
-        <div class="bebida-name">Agua Natural</div>
-        <div class="bebida-price">$15</div>
-      </div>
-    </div>
-    <div class="bebida-card">
-      <img class="bebida-img" src="https://images.unsplash.com/photo-1622597467836-f3e6c6a0a93f?w=300&q=80" alt="Suero hidratante" loading="lazy">
-      <div class="bebida-body">
-        <div class="bebida-name">Suero</div>
-        <div class="bebida-price">$20</div>
-      </div>
-    </div>
-  </div>
+<a href="#menu" class="btn">Ver Menú</a>
 
 </div>
 
+</section>
+
+<!-- MENU -->
+
+<section class="container" id="menu">
+
+<h2 class="section-title">🌮 Tacos</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Tacos al Pastor</h3>
+<p>
+Carne al trompo con piña, cilantro y cebolla recién picada.
+</p>
+<div class="price">$20</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Tacos de Bistec</h3>
+<p>
+Carne de res sazonada y cocinada a la plancha.
+</p>
+<div class="price">$22</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Tacos de Suadero</h3>
+<p>
+Jugosos, suaves y perfectos para el bajón.
+</p>
+<div class="price">$22</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Tacos Campechanos</h3>
+<p>
+La mezcla perfecta entre bistec y suadero.
+</p>
+<div class="price">$25</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- HOT DOGS -->
+
+<section class="container">
+
+<h2 class="section-title">🌭 Hot Dogs</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1612392062631-94b650b8e6f2?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Hot Dog Clásico</h3>
+<p>
+Con catsup, mostaza y cebolla crujiente.
+</p>
+<div class="price">$45</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558030137-a56c1b004fa3?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Hot Dog Especial</h3>
+<p>
+Con tocino, queso derretido y jalapeños.
+</p>
+<div class="price">$65</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- HAMBURGUESAS -->
+
+<section class="container">
+
+<h2 class="section-title">🍔 Hamburguesas</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Hamburguesa Sencilla</h3>
+<p>
+Pan artesanal, carne, lechuga y jitomate.
+</p>
+<div class="price">$70</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Hamburguesa con Queso</h3>
+<p>
+Con queso americano derretido y aderezos.
+</p>
+<div class="price">$80</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Hamburguesa Doble</h3>
+<p>
+Doble carne y doble queso para el hambre extrema.
+</p>
+<div class="price">$100</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PAPAS -->
+
+<section class="container">
+
+<h2 class="section-title">🍟 Papas a la Francesa</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Papas Chicas</h3>
+<p>
+Crujientes y perfectas para acompañar.
+</p>
+<div class="price">$30</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Papas Grandes</h3>
+<p>
+Ideal para compartir después de la fiesta.
+</p>
+<div class="price">$45</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- COMBOS -->
+
+<section class="container">
+
+<h2 class="section-title">🔥 Combos Nocturnos</h2>
+
+<div class="grid">
+
+<div class="card combo">
+<img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Combo Taquero</h3>
+<p>
+3 tacos + refresco.
+</p>
+<div class="price">$85</div>
+</div>
+</div>
+
+<div class="card combo">
+<img src="https://images.unsplash.com/photo-1612392062631-94b650b8e6f2?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Jocho Feliz</h3>
+<p>
+Hot Dog clásico + papas + refresco.
+</p>
+<div class="price">$100</div>
+</div>
+</div>
+
+<div class="card combo">
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>La Bajonera Total</h3>
+<p>
+Hamburguesa con queso + papas + refresco.
+</p>
+<div class="price">$140</div>
+</div>
+</div>
+
+<div class="card combo">
+<img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Combo Mixto</h3>
+<p>
+2 tacos + hot dog + refresco.
+</p>
+<div class="price">$110</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- BEBIDAS -->
+
+<section class="container">
+
+<h2 class="section-title">🥤 Bebidas</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Coca-Cola</h3>
+<p>
+Refresco frío para acompañar cualquier combo.
+</p>
+<div class="price">$25</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Agua Natural</h3>
+<p>
+Ligera y refrescante.
+</p>
+<div class="price">$15</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1622597467836-f3e6c6a0a93f?q=80&w=900&auto=format&fit=crop">
+<div class="card-content">
+<h3>Suero</h3>
+<p>
+Perfecto para recuperarte después del after.
+</p>
+<div class="price">$20</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
 <!-- FOOTER -->
+
 <footer>
-  <p>
-    📍 <strong>Zona Rosa, CDMX</strong><br>
-    🕙 Abierto de 10:00 pm a 6:00 am · Todos los días<br>
-    💳 Efectivo y tarjeta · Precios en pesos mexicanos
-  </p>
+
+<p>
+📍 <strong>Zona Rosa, CDMX</strong><br>
+🕙 Horario: 10:00 PM - 6:00 AM<br>
+💳 Aceptamos efectivo y tarjeta<br>
+🔥 “El bajón no perdona… La Bajonera tampoco.”
+</p>
+
 </footer>
 
 </body>
